@@ -30,12 +30,10 @@ Some concepts like creating variables, assign block, opening a workflow, and the
     In the vendor library, navigate to IBM -> Cloud -> Watson.ai -> Text Chat to find the Text Chat block
     
     ![Create Workflows](./img/lab2img002n.png)
-    <figure>
+
     <img src="./img/lab2img002n.png"
          alt="Add Text Chat"
-         width="50%" height="50%">
-    <figcaption>A single track trail outside of Albuquerque, New Mexico.</figcaption>
-    </figure>
+         width="25%" height="25%">
 
     Drag and drop the Text Chat action block into the flow after the start block (drop it on the + sign underneath).
 
