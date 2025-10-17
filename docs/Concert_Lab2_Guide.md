@@ -13,7 +13,7 @@ October 22, 2025
 This workshop will show beginners of the product the value of Concert Workflows by rapidly integrating different tools and orchestrating actions across them using a low-code interface. Users will be able to experience firsthand the various ways a workflow can be deployed and triggered.
 The workshop is broken into four stages. The setup has already been done for ServiceNow and watsonx.
 Each of the stages builds on the previous one. At the end of a workshop, you will have created an automation that will create a ServiceNow ticket, with an enhanced description using the GenAI capabilities of watsonx.
-Some concepts like creating variables, assign block, opening a workflow, and the steps to create your workflow is not covered in this workshop. To learn the basics of the platform, please complete [Lab 1](./20250709_Concert_Lab1_Guide.md) first.
+Some concepts like creating variables, assign block, opening a workflow, and the steps to create your workflow is not covered in this workshop. To learn the basics of the platform, please complete [Lab 1](./Concert_Lab1_Guide.md) first.
 
 #### 2.1	Add text generation task for Watsonx 
 1.	Create a new workflow
