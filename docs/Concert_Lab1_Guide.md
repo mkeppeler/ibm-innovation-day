@@ -238,7 +238,7 @@ user123/getDiskUsage. Drop down the Method (B) menu and select Get. Click Create
 13.	To start, you need to create a panel for the API in the Automation Center. To create the panel, you need to provide a name, but you can also provide a meaningful description and even a representative icon. 
  
     **Action: Click the Create Panel (A) button. Enter the Title (B) Linux Commands User123 and the Description (C) Commands for Linux hosts.  
-Download the linux pinguin PNG from [this page](https://penguine.png). 
+Download the linux pinguin PNG from [this page](./img/LinuxPenguin.PNG?target=_blank). 
 Upload the Icon (D) LinuxPenguin.png and click the Create (E) button. Finally, click the new Linux Commands (F) panel.**
 
     ![Workflows Home](./img/image047.jpg)

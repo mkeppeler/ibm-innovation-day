@@ -114,7 +114,7 @@ The goal of the stage is learn to deploy a workflow tile to the automation centr
 
     Select Create panel from top right.
     Enter Title as userxyz_deepdive, where xyz is associated with your username.
-    Click the Upload image button and upload an image of your choice with max. 100kb e.g. watsonx from [here](https://github.ibm.com/expert-labs-dach/ael-deep-dive-learning-event/blob/main/tbm-deep-dive/watsonx.png)
+    Click the Upload image button and upload an image of your choice with max. 100kb e.g. watsonx from [here](./img/watsonx.png?target=_blank)
 
     Click Create
     ![Create Workflows](./img/lab2img015.png)
