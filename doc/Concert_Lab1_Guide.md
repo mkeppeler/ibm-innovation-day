@@ -282,3 +282,5 @@ Upload the Icon (D) LinuxPenguin.png and click the Create (E) button. Finally, c
 3.	This concludes your tour of Concert Workflows. Thank you for your time. 
 ### 2. Getting help and troubleshooting 
 If you require assistance, ask your questions to the instructor or ask the colleagues who are assisting the session in your location.  
+
+[Back](./Labs.md)

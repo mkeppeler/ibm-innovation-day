@@ -344,4 +344,4 @@ The goal of this stage is to illustrate how easily your can call your automation
 
 Congratulations - you completed the Lab.
 
-#### 2.5 Conclusion
+[Back](./Labs.md)
