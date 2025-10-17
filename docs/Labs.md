@@ -12,7 +12,7 @@ October 22, 2025
 
 - Supervised training
 
-### Instruction Guide: [Concert_Lab1_Guide](./Concert_Lab2_Guide.md)
+### Instruction Guide: [Concert_Lab1_Guide](./Concert_Lab1_Guide.md)
 
 ### Lab topics:
 
