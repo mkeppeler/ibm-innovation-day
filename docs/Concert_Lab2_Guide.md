@@ -33,7 +33,7 @@ Some concepts like creating variables, assign block, opening a workflow, and the
     <figure>
     <img src="./img/lab2img002n.png"
          alt="Add Text Chat"
-         width="200" height="100">
+         width="50%" height="50%">
     <figcaption>A single track trail outside of Albuquerque, New Mexico.</figcaption>
     </figure>
 
