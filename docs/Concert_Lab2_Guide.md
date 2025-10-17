@@ -108,9 +108,9 @@ The goal of the stage is learn to deploy a workflow tile to the automation centr
 
 2.  Create a tile in the automation center
 
-   Navigate to the Automation Center using the left navigation bar.
+    Navigate to the Automation Center using the left navigation bar.
 
-   ![Create Workflows](./img/lab2img014.png)
+    ![Create Workflows](./img/lab2img014.png)
 
     Select Create panel from top right.
     Enter Title as userxyz_deepdive, where xyz is associated with your username.
