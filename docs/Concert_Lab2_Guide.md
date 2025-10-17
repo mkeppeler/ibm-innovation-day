@@ -31,10 +31,6 @@ Some concepts like creating variables, assign block, opening a workflow, and the
     
     ![Create Workflows](./img/lab2img002n.png)
 
-    <img src="./img/lab2img002n.png"
-         alt="Add Text Chat"
-         width="25%" height="25%">
-
     Drag and drop the Text Chat action block into the flow after the start block (drop it on the + sign underneath).
 
     ![Create Workflows](./img/lab2img003.png)
