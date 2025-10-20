@@ -4,7 +4,7 @@ October 22, 2025
 
 # Zero to Workflow: Create Fast with Low-Code/No-Code Magic
 
-![IBM Innovation Day](image001.png "IBM INNOVATION DAY")
+![IBM Innovation Day](./img/image001.png "IBM INNOVATION DAY")
 
 ## Where Code Meets Concert – Exercise Guide 3
 
@@ -17,13 +17,13 @@ Some concepts like creating variables, assign block, opening a workflow, and the
 
 #### 3.1	Task description
 
-The workflow should conain the following steps
+Create a workflow called **Get books**, the workflow should contain the following steps
 
-1.	Get a ist of books
+1.	Get a list of books
 
-    The book list can be retrieved from [https://softwium.com/api/books](https://softwium.com/api/books)
+    The book list can be retrieved from the **api_url** [https://softwium.com/api/books](https://softwium.com/api/books) with the **request_method** `GET`
 
-2.  Iterate through the response
+2.  Iterate through the response (list of books)
 
 3.  Look for the number of pages the book has
 
