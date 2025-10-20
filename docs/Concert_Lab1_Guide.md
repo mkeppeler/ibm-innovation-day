@@ -22,26 +22,26 @@ In this Exercise Guide, you will explore IBM Concert Workflows. Concert Workflow
  
     **When you are logged into IBM Concert Workflows, notice the Workflows (A), Automation Center (B), Jobs (C), and Authentications (D) tiles.**
  
-    ![Workflows Home](./img/image003.jpg "Home")
+    ![Workflows Home](./img/image003a.png "Home")
 
 3.	At the bottom of each tile is a shortcut link to create a new item. For example, the Create Workflow link opens the Workflows page with a dialog already opened to create a new workflow. 
  
     **See the Create Workflow (A) link.**
 
-    ![Workflows Home](./img/image004.jpg "Create Workflow")
+    ![Workflows Home](./img/image004a.png "Create Workflow")
 
 4.	The dashboard also shows you a summary of recent workflow executions and currently running workflows. 
  
     **Have a look at the Workflow executions (A) and Workflows running (B).**
  
-    ![Workflows Home](./img/image005.jpg "Workflows")
+    ![Workflows Home](./img/image005a.png "Workflows")
 
 #### 1.2	Exploring workflows 
 1.	Start with workflows. 
 
     **Action: Click Workflows (A).**
 
-    ![Workflows Home](./img/image006.jpg "Create Workflow")
+    ![Workflows Home](./img/image006a.jpg "Create Workflow")
 
 2.	This brings you into a folder structure of workflows. 
  

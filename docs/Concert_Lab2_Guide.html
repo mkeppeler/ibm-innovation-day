@@ -161,9 +161,9 @@ Some concepts like creating variables, assign block, opening a workflow, and the
 <li>
 <p>Add text chat to the workflow
 In the vendor library, navigate to IBM -&gt; Cloud -&gt; <a href="http://Watson.ai">Watson.ai</a> -&gt; Text Chat to find the Text Chat block</p>
-<p><img src="./img/lab2img002n.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img002n.png" style="width: 30%;" alt="Create Workflows"></p>
 <p>Drag and drop the Text Chat action block into the flow after the start block (drop it on the + sign underneath).</p>
-<p><img src="./img/lab2img003.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img003.png" style="width: 30%;" alt="Create Workflows"></p>
 </li>
 <li>
 <p>Receive a response from Watson</p>
@@ -190,9 +190,9 @@ In the vendor library, navigate to IBM -&gt; Cloud -&gt; <a href="http://Watson.
 <span class="hljs-punctuation">}</span>
 </code></pre>
 <p>Click on the Assign block underneath. Assign the value <code>$IBM_1.result</code> to the variable <code>$result</code> as seen below.</p>
-<p><img src="./img/lab2img006.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img006.png" style="width: 30%;" alt="Create Workflows"></p>
 <p>Save and run the workflow.</p>
-<p><img src="./img/lab2img007n.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img007n.png" style="width: 30%;" alt="Create Workflows"></p>
 <p>The output in the log should look like this.</p>
 <p><img src="./img/lab2img008.png" alt="Create Workflows"></p>
 </li>
@@ -209,8 +209,8 @@ In the vendor library, navigate to IBM -&gt; Cloud -&gt; <a href="http://Watson.
 </blockquote>
 <p><img src="./img/lab2img009a.png" alt="Create Workflows"><img src="./img/lab2img009.png" alt="Create Workflows"></p>
 <p>Using the object editor, expand the messages field of the Text Chat block (this can be found under body) and replace the value for key text with the variable content of $userInput</p>
-<p><img src="./img/lab2img010n.png" alt="Create Workflows">
-<img src="./img/lab2img011n.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img010n.png" style="width: 30%;" alt="Create Workflows">
+<img src="./img/lab2img011n.png" style="width: 30%;" alt="Create Workflows"></p>
 <p>This will insert our input variable into the messages text part of the body</p>
 <p>Go back to the Assign node. Assign the <code>result</code> variable to value <code>$IBM_1.result.choices[0].message.content</code></p>
 <p><img src="./img/lab2img013.png" alt="Create Workflows"></p>
@@ -221,26 +221,26 @@ In the vendor library, navigate to IBM -&gt; Cloud -&gt; <a href="http://Watson.
 <li>
 <p>Create a tile in the automation center</p>
 <p>Navigate to the Automation Center using the left navigation bar.</p>
-<p><img src="./img/lab2img014.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img014.png" style="width: 30%;" alt="Create Workflows"></p>
 <p>Select Create panel from top right.
 Enter Title as userxyz_deepdive, where xyz is associated with your username.
 Click the Upload image button and upload an image of your choice with max. 100kb e.g. watsonx from <a href="./img/watsonx.png?target=_blank">here</a></p>
-<p>Click Create
-<img src="./img/lab2img015.png" alt="Create Workflows"></p>
+<p>Click Create</p>
+<p><img src="./img/lab2img015.png" style="width: 50%;" alt="Create Workflows"></p>
 <p>Open your panel and click Create tile</p>
 <p><strong>Select your created workflow</strong>, click next and optionally change the title and add a description. Click next again and select the <code>userInput</code> variable as <strong>Overridable</strong>. Finally, click *<em>Create</em>.</p>
-<p><img src="./img/lab2img016.png" alt="Create Workflows">
-<img src="./img/lab2img017.png" alt="Create Workflows">
-<img src="./img/lab2img018.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img016.png" style="width: 50%;" alt="Create Workflows">
+<img src="./img/lab2img017.png" style="width: 50%;" alt="Create Workflows">
+<img src="./img/lab2img018.png" style="width: 50%;" alt="Create Workflows"></p>
 </li>
 <li>
 <p>Test the automation</p>
 <p>You can now click on the tile and use it as a way to trigger the workflow with input manually. You should receive a response back from watsonx, effectively creating a chatbot without any context ability.</p>
-<p><img src="./img/lab2img019.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img019.png" style="width: 30%;" alt="Create Workflows"></p>
 <p>Enter a custom <code>userInput</code> value (e.g. <code>What is a deep dive session?</code>) for your workflow in the Input tab and click Run to start it.</p>
-<p><img src="./img/lab2img020.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img020.png" style="width: 75%;" alt="Create Workflows"></p>
 <p>Watch for the Output returned by watsonx</p>
-<p><img src="./img/lab2img021.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img021.png" style="width: 75%;" alt="Create Workflows"></p>
 <p>Click Cancel to leave.</p>
 </li>
 </ol>
@@ -254,17 +254,17 @@ Click the Upload image button and upload an image of your choice with max. 100kb
 <p>Navigate to <strong>Workflows</strong> and open the workflow you created.</p>
 <p>To distinguish the incident tickets from the parallel running workflows of the lab, we will add the username (you are logged in with) as a prefix for the ticket Short description.</p>
 <p>In your workflow open the Common library and drag and drop the <strong>Context</strong> block on the + sign after your Start block. (scroll down or search for Context under Common)</p>
-<p><img src="./img/lab2img022n.png" alt="Create Workflows">
-<img src="./img/lab2img023n.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img022n.png" style="width: 30%;" alt="Create Workflows">
+<img src="./img/lab2img023n.png" style="width: 30%;" alt="Create Workflows"></p>
 <p>Click on the checkbox of the includeRoles variable in the Object Editor tab of the Context block to set it to true</p>
-<p><img src="./img/lab2img024.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img024.png" style="width: 30%;" alt="Create Workflows"></p>
 <p>Furthermore drop an Assign block after the Context Block by clicking on the + and select the block from <strong>Quick access</strong></p>
-<p><img src="./img/lab2img025n.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img025n.png" style="width: 75%;" alt="Create Workflows"></p>
 <p>Assign your current username (retrieved from the context) $Context_1.result.userName to the $result variable for logging</p>
-<p><img src="./img/lab2img026.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img026.png" style="width: 50%;" alt="Create Workflows"></p>
 <p>Click on the Text Chat block, set the breakpoint left from the block (switching circle color from blue to red) and run Debug</p>
-<p><img src="./img/lab2img027n.png" alt="Create Workflows">
-<img src="./img/lab2img028n.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img027n.png" style="width: 50%;" alt="Create Workflows"><br>
+<img src="./img/lab2img028n.png" style="width: 50%;" alt="Create Workflows"></p>
 <p>Verify the result with your username in the Debugger tab (expand local -&gt; intermediate -&gt; result)</p>
 <p><img src="./img/lab2img029n.png" alt="Create Workflows"></p>
 <p>Click on the stop button and Save the workflow</p>
@@ -275,10 +275,10 @@ Click the Upload image button and upload an image of your choice with max. 100kb
 <p>In the same workflow (or clone the workflow), create a new  variable called <code>description</code> (within the Start block) with flags In and Required and default value like dummy_description</p>
 <p><img src="./img/lab2img031.png" alt="Create Workflows"></p>
 <p>Drag and drop the <strong>createTable</strong> block from the <strong>ServiceNow</strong> library on the plus sign after the existing Assign_1 block.</p>
-<p><img src="./img/lab2img032.png" alt="Create Workflows">
-<img src="./img/lab2img033.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img032.png" style="width: 30%;" align="top" alt="Create Workflows">
+<img src="./img/lab2img033.png" style="width: 50%;" alt="Create Workflows"></p>
 <p>Click the dropdown icon in the <strong>authKey</strong> field of the ServiceNow block and select <code>admin/ServiceNow</code> from the list (alternatively you can create your own ServiceNow instance, a new authentication and add your own username/passwords to access it)</p>
-<p><img src="./img/lab2img034.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img034.png" style="width: 50%;" alt="Create Workflows"></p>
 <p>In the <strong>tableName</strong> field, enter the following table name (note the correct quotation mark type): <code>'incident'</code></p>
 <p>In the <strong>Table</strong> field, paste the following body to set the <strong>short description</strong> as the user input and the longer normal <strong>description</strong> as the AI-enhanced description from watsonx.</p>
 <pre><code class="language-json"><span class="hljs-punctuation">{</span>
@@ -286,13 +286,13 @@ Click the Upload image button and upload an image of your choice with max. 100kb
   <span class="hljs-attr">&quot;description&quot;</span><span class="hljs-punctuation">:</span> $description
 <span class="hljs-punctuation">}</span>
 </code></pre>
-<p><img src="./img/lab2img035.png" alt="Create Workflows">
-<img src="./img/lab2img036.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img035.png" style="width: 30%;" align="top" alt="Create Workflows">
+<img src="./img/lab2img036.png" style="width: 50%;" alt="Create Workflows"></p>
 <p>Save and Run the workflow.</p>
 <p>You can now view the ticket in the attached <a href="https://dev222752.service-now.com/now/nav/ui/classic/params/target/incident_list.do">ServiceNow developer instance</a> ([<strong>Username and password information will be provided by the instructors</strong>). Navigate to the Service Desk -&gt; Incidents table using Favorites -&gt; Incidents</p>
-<p><img src="./img/lab2img037.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img037.png" style="width: 50%;" alt="Create Workflows"></p>
 <p>You will see your newly created ticket, with the input variable value as a Short description and description variable and Description.</p>
-<p><img src="./img/lab2img038.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img038.png" style="width: 75%;" alt="Create Workflows"></p>
 </li>
 <li>
 <p>Modify chat prompt</p>
@@ -300,25 +300,25 @@ Click the Upload image button and upload an image of your choice with max. 100kb
 <p>Update the input to your watsonx Text Chat action block (text in messages variable) to the following:</p>
 <pre><code class="language-txt">&quot;You are a cautious assistant. You carefully follow instructions. You are helpful and harmless and you follow ethical guidelines and promote positive behavior. Your response should only include the answer. Do not provide any further explanation. You should provide concise descriptions of IT issue provided to you. You should also provide a suggestion as to how to fix it the following problem:&quot; + $userInput + &quot;\n&quot;
 </code></pre>
-<p><img src="./img/lab2img039n.png" alt="Create Workflows">
+<p><img src="./img/lab2img039n.png" style="width: 50%;" alt="Create Workflows">
 <img src="./img/lab2img040n.png" alt="Create Workflows"></p>
 <p>Then open the ServiceNow block</p>
 <p>Add the <code>$Context_1.result.userName</code> as a prefix to the <strong>short_description</strong> value of Table <code>$Context_1.result.userName + &quot;:&quot; + $userInput</code> and exchange the <strong>description</strong> with the value of the variable <code>$IBM_1.result.choices[0].message.content</code> from the Text Chat block</p>
-<p><img src="./img/lab2img041n.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img041n.png" style="width: 50%;" alt="Create Workflows"></p>
 <p>Click Save and Run and verify again your incident ticket in ServiceNow.</p>
-<p><img src="./img/lab2img042.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img042.png" style="width: 50%;" alt="Create Workflows"></p>
 </li>
 <li>
 <p>Create tile for the AI assisted ticket workflow</p>
 <p>On Concert Workflows, navigate to your panel userxyz_deepdive in the Automation Center (exchanging xyz everywhere with your number)</p>
 <p><img src="./img/lab2img043.png" alt="Create Workflows"></p>
 <p>Create a new tile with your workflow and call it userxyz_create_AI_enhanced_ticket or similar. Remember to set userInput as overridable.</p>
-<p><img src="./img/lab2img044.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img044.png" style="width: 75%;" alt="Create Workflows"></p>
 <p>Run the tile, and use “I cant log into my SAP account” or something similar as input to test and verify the output of your workflow</p>
-<p><img src="./img/lab2img045.png" alt="Create Workflows">
-<img src="./img/lab2img046.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img045.png" style="width: 75%;" alt="Create Workflows">
+<img src="./img/lab2img046.png" style="width: 75%;" alt="Create Workflows"></p>
 <p>Navigate to your ServiceNow developer instance and look out for this new incident (if it does not show up automatically click on the hamburger on the top left and select Refresh List to update the list)</p>
-<p><img src="./img/lab2img047.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img047.png" style="width: 30%;" alt="Create Workflows"></p>
 <p>View your automatically created ticket, with a short description as your input and a long description as the WatsonX response that includes a description of the issue as well as the next steps to fix it. This may help IT  operations resolve issues faster.</p>
 <p><img src="./img/lab2img048.png" alt="Create Workflows"></p>
 </li>
@@ -334,26 +334,26 @@ Click the Upload image button and upload an image of your choice with max. 100kb
 <img src="./img/lab2img050.png" alt="Create Workflows"></p>
 <p>Open up the cloned workflow.</p>
 <p>Select the <strong>Deploy Workflow</strong> form the <strong>Workflow actions</strong> drop-down.</p>
-<p><img src="./img/lab2img051n.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img051n.png" style="width: 30%;" alt="Create Workflows"></p>
 <p>In the <strong>API Name</strong> field, click the plus icon to create a new API and give the API a name, like userxyz-create-ticket and click Create</p>
-<p><img src="./img/lab2img052.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img052.png" style="width: 30%;" alt="Create Workflows"></p>
 <p>Create a new <strong>Stage</strong> called <strong>prod</strong> (+ icon)</p>
-<p><img src="./img/lab2img053.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img053.png" style="width: 30%;" alt="Create Workflows"></p>
 <p>Create a new <strong>Endpoint</strong> (+ icon), selecting the method as <strong>Get</strong> and path <strong>/userxyz-create-ticket</strong></p>
-<p><img src="./img/lab2img054.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img054.png" style="width: 50%;" alt="Create Workflows"></p>
 <p>Under the Input variables mapping menu, select <strong>Enable</strong> for the <code>userInput</code> variable. The request part should be <strong>Query Parameters</strong>. Change the Field name to <strong>Issue</strong>.</p>
-<p><img src="./img/lab2img055n.png" alt="Create Workflows"></p>
-<p><img src="./img/lab2img056n.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img055n.png" style="width: 75%;" alt="Create Workflows"></p>
+<p><img src="./img/lab2img056n.png" style="width: 75%;" alt="Create Workflows"></p>
 <p>Click Deploy.</p>
 </li>
 <li>
 <p>Change Authentication method</p>
 <p>Navigate to the APIs tab in the navigation bar. Note: All workflows created can be called via fully productionized APIs. Swagger documentation can be viewed when clicking on the Swagger UI button.</p>
-<p><img src="./img/lab2img057.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img057.png" style="width: 30%;" alt="Create Workflows"></p>
 <p>Click on your API and select <strong>Settings</strong> on the left-hand side menu.</p>
-<p><img src="./img/lab2img058n.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img058n.png" style="width: 30%;" alt="Create Workflows"></p>
 <p>Under the Authentications menu, set authentication as Anonymous. Save.</p>
-<p><img src="./img/lab2img059.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img059.png" style="width: 75%;" alt="Create Workflows"></p>
 </li>
 <li>
 <p>Calling the API</p>
@@ -362,7 +362,7 @@ Click the Upload image button and upload an image of your choice with max. 100kb
 </code></pre>
 <blockquote>
 <p>Hint: You can get the API Path from Workflows deployments
-<img src="./img/lab2img060n.png" alt="Create Workflows"></p>
+<img src="./img/lab2img060n.png" style="width: 75%;" alt="Create Workflows"></p>
 </blockquote>
 <p>The response in your browser should look like below.</p>
 <pre><code class="language-json"><span class="hljs-punctuation">{</span><span class="hljs-attr">&quot;result&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;1. Issue: Inability to read emails on iPhone.\n2. Suggestion: Check email account settings, ensure internet connection is active, restart iPhone, or sign out and sign back into the email account. If persistent, update iOS or contact Apple Support.&quot;</span><span class="hljs-punctuation">}</span>
