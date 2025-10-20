@@ -36,6 +36,12 @@ Create a workflow called **Get books**, the workflow should contain the followin
 
     This illustrates how data can be retrieved, processed, and how to orchestrate various actions together.
 
-#### 2.2 Hints
+#### 3.2 Hints
 
 Hints can be found [here](./Concert_Lab3_Hints.md)
+
+---
+
+Congratulations - you completed the Lab.
+
+[Back](./Labs.md)

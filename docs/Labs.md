@@ -39,4 +39,21 @@ Check filesystem utlization on a target system (RHEL VM) and open an incident in
 
 ### Use Case:
 
-Use an API (or UI) to create a new incident, while the workflow usesWatsonX.ai to gather incident solutions for the current problem and add it to the incident ticket during creation such an ticket analyst does have immediate solution ideas to minimize the downtime (MTTR)
+Use an API (or UI) to create a new incident, while the workflow uses watsonx.ai to gather incident solutions for the current problem and add it to the incident ticket during creation, an ticket analyst does have immediate solution ideas to minimize the downtime (MTTR)
+
+## Where Code Meets Concert – [Exercise Guide 3 (Optional)](./Concert_Lab3_Guide.md)
+
+### Type:
+
+- Self-paced training
+
+### Instruction Guide: [Concert_Lab3_Guide](./Concert_Lab3_Guide.md)
+
+### Lab topics:
+
+- Build your own workflow from scratch
+- Get data from external, process the data and return it as output
+
+### Use Case:
+
+Import a list of books, examin if it is a long or short book, sort them into lists and return list for short and long books.
