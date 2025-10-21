@@ -41,32 +41,65 @@ In this Exercise Guide, you will explore IBM Concert Workflows. Concert Workflow
 
     **Action: Click Workflows (A).**
 
-    ![Workflows Home](./img/image006a.jpg "Create Workflow")
+    ![Workflows Home](./img/image006a.png "Create Workflow")
 
 2.	This brings you into a folder structure of workflows. 
  
      **Look at the Workflows folder structure (A).**
 
-    ![Workflows Home](./img/image007.jpg "Create Workflow")
+    ![Workflows Home](./img/image007a.png "Create Workflow")
 
- 
+    Create a directory
+
+    **Action: Expand the 3-dot menu and select Create folder (A)**
+
+    ![Workflows Home](./img/image007b.png "Create Workflow")
+
+    **Action: (A) Enter HandsOn Lab 1 as name and (B) click Create**
+
+    ![Workflows Home](./img/image007c.png "Create Workflow")
+
+    You will use this directory later.
+
 3.	Everything in Concert Workflows is written in either Yet Another Markup Language (YAML) or JavaScript Object Notation JSON). So, you can configure Git and store your workflows in a Git repository to maintain your automation and other coding practices. 
  
     **Action: Expand the 3-dot menu and point to the Git config (A) menu option.**
  
     ![Workflows Home](./img/image008.jpg "Create Workflow")
  
-4.	The SSH workflow is the one you’re interested in. This workflow proactively connects to a server and looks for directories with high utilization so that steps can be taken to manage that utilization. 
+4.	The SSH workflow is the one you’re interested in. This workflow proactively connects to a server and looks for directories with high utilization so that steps can be taken to manage that utilization.
+
+    To clone and open the workflow
  
-    **Action: Click on Shared -> admin -> User -> HandsOn Lab 1 folders to see the SSH-df-h workflow (A). Click on the Workflow name to open the workflow editor.**
+    **Action: Click on Shared -> admin -> User -> HandsOn Lab 1 folders to see the SSH-df-h workflow (A). Click the 3-dot menu and (B) select Clone.**
  
-    ![Workflows Home](./img/image009.jpg "Create Workflow")
+    ![Workflows Home](./img/image009a.png "Create Workflow")
+
+    **Action: Click on User (A)**
+
+    ![Workflows Home](./img/image009b.png "Create Workflow")
+
+    **Action: Select the folder you created earlier in your home directory - HandsOn Lab 1 (A)**
+
+    ![Workflows Home](./img/image009c.png "Create Workflow")
+
+    **Action: Click Clone (A) to clone the workflow.**
+
+    ![Workflows Home](./img/image009d.png "Create Workflow")
+
+    **Action: Click on Workflows (A) and navigate into the HandsOn Lab 1 directory (B).**
+
+    ![Workflows Home](./img/image009e.png "Create Workflow")
+
+    **Action: Click on the Workflow name (A) to open the workflow editor.**
+
+    ![Workflows Home](./img/image009f.png "Create Workflow")
 
 5.	Now, we are in the workflow editor. In the center is the workflow itself, and on the left, you can see the vast library of integrations that are available in Concert Workflows. 
  
     **Action: Notice the workflow (A) and the integration library (B).**
 
-    ![Workflows Home](./img/image010.png "Create Workflow")
+    ![Workflows Home](./img/image010a.png "Create Workflow")
  
 6.	Within the workflow, you can see the SSH integration that is the focus of the workflow. From this or any other block, you can easily locate that integration in the library. 
  
