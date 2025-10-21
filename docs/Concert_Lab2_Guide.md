@@ -98,7 +98,7 @@ The goal of the stage is learn to deploy a workflow tile to the automation centr
 
     Go back to the Assign node. Assign the `result` variable to value `$IBM_1.result.choices[0].message.content`
 
-    ![Create Workflows](./img/lab2img013.png)
+    ![Create Workflows](./img/lab2img012.png)
 
     This will only save the response text part of the object sentback by watsonx
 

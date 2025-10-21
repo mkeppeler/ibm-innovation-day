@@ -135,11 +135,50 @@
   color: var(--color-caution);
 }
 
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #6FA1FE;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+#topBtn:hover {
+  background-color: #0F62FE;
+}
+
+#downBtn {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #6FA1FE;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+#downBtn:hover {
+  background-color: #0F62FE;
+}
+
 </style>
         
-        </head>
-        <body class="vscode-body vscode-light">
-            <h1 id="ibm-innovation-day">IBM INNOVATION DAY</h1>
+</head>
+<body class="vscode-body vscode-light">
+<h1 id="ibm-innovation-day">IBM INNOVATION DAY</h1>
 <p>October 22, 2025</p>
 <h1 id="zero-to-workflow-create-fast-with-low-codeno-code-magic">Zero to Workflow: Create Fast with Low-Code/No-Code Magic</h1>
 <p><img src="./img/image001.png" style="width: 100%;" alt="IBM Innovation Day" title="IBM INNOVATION DAY"></p>
@@ -213,7 +252,7 @@ In the vendor library, navigate to IBM -&gt; Cloud -&gt; <a href="http://Watson.
 <img src="./img/lab2img011n.png" style="width: 30%;" alt="Create Workflows"></p>
 <p>This will insert our input variable into the messages text part of the body</p>
 <p>Go back to the Assign node. Assign the <code>result</code> variable to value <code>$IBM_1.result.choices[0].message.content</code></p>
-<p><img src="./img/lab2img013.png" alt="Create Workflows"></p>
+<p><img src="./img/lab2img012.png" alt="Create Workflows"></p>
 <p>This will only save the response text part of the object sentback by watsonx</p>
 <p>Save and run the workflow to test the response.</p>
 <p><img src="./img/lab2img013.png" alt="Create Workflows"></p>
@@ -373,7 +412,42 @@ Click the Upload image button and upload an image of your choice with max. 100kb
 <p>Congratulations - you completed the Lab.</p>
 <p><a href="./Labs.html">Back</a></p>
 
-            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
-            
-        </body>
-        </html>
+<script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+<script>
+// Get the button
+let mybutton = document.getElementById("topBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+// When the user clicks on the button, scroll to the bottom of the document
+function downFunction() {
+  const startScrollPos = window.pageYOffset;
+  const body = document.body;
+  const html = document.documentElement;
+
+  const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+  const scrollto = height - startScrollPos;
+
+  window.scrollTo(0,scrollto);
+}
+
+</script>
+<div id="bottom"></div>            
+</body>
+</html>
