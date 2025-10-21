@@ -179,10 +179,10 @@ Username and password will be provided by the instructor.</p>
 <p>This brings you into a folder structure of workflows.</p>
 <p><strong>Look at the Workflows folder structure (A).</strong></p>
 <p><img src="./img/image007a.png" alt="Workflows Home" title="Create Workflow"></p>
-<p>Create a directory</p><
-<p><strong>**Action: Expand the 3-dot menu and select Create folder (A)</strong></p>
+<p>Create a directory</p>
+<p><strong>Action: Expand the 3-dot menu and select Create folder (A)</strong></p>
 <p><img src="./img/image007b.png" style="width: 30%;" alt="Workflows Home" title="Create Workflow"></p>
-<p><strong>**Action: (A) Enter HandsOn Lab 1 as name and (B) click Create</strong></p>
+<p><strong>Action: (A) Enter HandsOn Lab 1 as name and (B) click Create</strong></p>
 <p><img src="./img/image007c.png" style="width: 50%;" alt="Workflows Home" title="Create Workflow"></p>
 <p>You will use this directory later.</p>
 </li>
@@ -193,10 +193,9 @@ Username and password will be provided by the instructor.</p>
 </li>
 <li>
 <p>The SSH workflow is the one you’re interested in. This workflow proactively connects to a server and looks for directories with high utilization so that steps can be taken to manage that utilization.</p>
-<p><strong>Action: Click on Shared -&gt; admin -&gt; User -&gt; HandsOn Lab 1 folders to see the SSH-df-h workflow (A). Click on the Workflow name to open the workflow editor.</strong></p>
-<p>To clone and open the workflow
-<p><strong>Action: Click on Shared -> admin -> User -> HandsOn Lab 1 folders to see the SSH-df-h workflow (A). Click the 3-dot menu and (B) select Clone.</strong></p>
- <p><img src="./img/image009a.png" alt="Workflows Home" title="Create Workflow"></p>
+<p>To clone and open the workflow</p>
+<p><strong>Action: Click on Shared -&gt; admin -&gt; User -&gt; HandsOn Lab 1 folders to see the SSH-df-h workflow (A). Click the 3-dot menu and (B) select Clone.</strong></p>
+<p><img src="./img/image009a.png" alt="Workflows Home" title="Create Workflow"></p>
 <p><strong>Action: Click on User (A)</strong></p>
 <p><img src="./img/image009b.png" style="width: 75%;" alt="Workflows Home" title="Create Workflow"></p>
 <p><strong>Action: Select the folder you created earlier in your home directory - HandsOn Lab 1 (A)</strong></p>
@@ -216,7 +215,7 @@ Username and password will be provided by the instructor.</p>
 <li>
 <p>Within the workflow, you can see the SSH integration that is the focus of the workflow. From this or any other block, you can easily locate that integration in the library.</p>
 <p><strong>Action: Hover over the SSH block to reveal the vertical ellipsis (A) and click the Locate (B) option. Then, point to the SSH (C) integration on the left.</strong></p>
-<p><img src="./img/image011.jpg" alt="Workflows Home" title="Create Workflow"></p>
+<p><img src="./img/image011.png" style="width: 75%;" alt="Workflows Home" title="Create Workflow"></p>
 </li>
 <li>
 <p>To include a block in your workflow, drag it over and complete the details. For the SSH integration, authentication to the server is the most important detail.</p>
@@ -302,48 +301,50 @@ Username and password will be provided by the instructor.</p>
 </li>
 <li>
 <p>Create an API.</p>
-<p>** Action: In the Concert Workflows dashboard, click the APIs (A) tab near the top of the screen. Click the Create API (B) button.**</p>
+<p><strong>Action: In the Concert Workflows menue, click the APIs (A) link. Click the Create API (B) button.</strong></p>
 <p><img src="./img/image031.png" alt="Workflows Home"></p>
 <p><strong>Enter a Name (A) as follow: linux-command-user123 with your dedicated username at the end. Under General Settings, select Worker group as default, under Authentications, select Authentication as Anonymous, and then click the Create button. If you see a screen indicating that there are no workflow deployments created yet, you can ignore it.</strong></p>
-<p><img src="./img/image032.jpg" alt="Workflows Home"></p>
+<p><img src="./img/image032.png" style="width: 50%;" alt="Workflows Home"></p>
 </li>
 <li>
 <p>Create an API stage.</p>
 <p><strong>Action: Click the Stages (A) link and then click the Create Stage (B) button.</strong></p>
 <p><img src="./img/image033.png" alt="Workflows Home"></p>
 <p><strong>Enter the Name (A)  ‘prod’ and click the Create (B) button.</strong></p>
-<p><img src="./img/image034.jpg" alt="Workflows Home"></p>
+<p><img src="./img/image034.png" style="width: 50%;" alt="Workflows Home"></p>
 </li>
 <li>
 <p>Now, we will go back to the SSH-df-h Workflow to deploy it.</p>
-<p><strong>Action: Go back to Workflows -&gt; Shared -&gt; admin -&gt; User -&gt; HandOn Lab 1 -&gt; SSH-df-h workflow.  Click on the Deploy Workflow button on the top right.</strong></p>
+<p><strong>Action: Go back to Workflows -&gt; User -&gt; HandOn Lab 1 -&gt; SSH-df-h workflow.  Select Deploy Workflow from the Workflow actions on the top right.</strong></p>
 <p><img src="./img/image035.png" alt="Workflows Home"></p>
 </li>
 <li>
 <p>Fill out the information to deploy as follows.</p>
 <p><strong>Action: Click on the API Name (A) field. Choose the API that you created in the previous steps e.g. linux-command-user123 with your dedicated username.</strong></p>
-<p><img src="./img/image037.jpg" alt="Workflows Home"></p>
+<p><img src="./img/image036.png" alt="Workflows Home"></p>
 </li>
 <li>
 <p>Attach the endpoint to your production.</p>
 <p><strong>Action: Select the prod (A) stage and click the plus sign (B) next to the Endpoint field.</strong></p>
-<p><img src="./img/image038.jpg" alt="Workflows Home"></p>
+<p><img src="./img/image038.png" alt="Workflows Home"></p>
 </li>
 <li>
 <p>Give your endpoint a name and select the API method. All the standard API methods are available, like Get, Put, and Delete. Get is appropriate for this endpoint.</p>
-<p><strong>Action: In the Path (A) field, enter a dedicated name with your username e.g.
-user123/getDiskUsage. Drop down the Method (B) menu and select Get. Click Create.</strong></p>
-<p><img src="./img/image039.jpg" alt="Workflows Home"></p>
+<p><strong>Action: In the Path (A) field, enter a dedicated name with your username e.g. user123_getDiskUsage. Drop down the Method (B) menu and select Get. Click Create.</strong></p>
+<p><img src="./img/image039.png" style="width: 30%;" alt="Workflows Home"></p>
 </li>
 <li>
 <p>The endpoint can now be copied to your clipboard and deployed.</p>
 <p><strong>Action: Click the Copy (A) button and then click the Deploy (B) button.</strong></p>
-<p><img src="./img/image040.jpg" alt="Workflows Home"></p>
+<p><img src="./img/image040.png" alt="Workflows Home"></p>
 </li>
 <li>
 <p>Now, you can paste the URL into your browser to run the workflow and see the result.</p>
 <p><strong>Action: Open a new browser tab, paste the URL (A) into your browser, and notice the result (B). Return to the Concert Workflows browser tab.</strong></p>
-<p><img src="./img/image041.jpg" alt="Workflows Home"></p>
+<pre><code class="language-json">
+<span class="hljs-punctuation">{</span><span class="hljs-attr">&quot;result&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-punctuation">[</span><span class="hljs-string">&quot;/dev/vda3       495M  173M  322M  35% /boot&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">}</span>
+
+</code></pre>
 </li>
 <li>
 <p>If you go back to the APIs page in Concert Workflows, you can also get the Swagger build-out for the endpoint.</p>
@@ -351,55 +352,56 @@ user123/getDiskUsage. Drop down the Method (B) menu and select Get. Click Create
 <p><img src="./img/image042.png" alt="Workflows Home"></p>
 </li>
 <li>
-<p>Within the Swagger, you can see the user123/getDiskUse endpoint and can even try it out.</p>
-<p><strong>Action: Point to your dedicated user123/getDiskUsage (A) endpoint and click the Try it out (B) button. Click the Execute (C) button and point to the Response body (D).</strong></p>
-<p><img src="./img/image043.jpg" alt="Workflows Home">
-<img src="./img/image044.jpg" alt="Workflows Home">
-<img src="./img/image045.jpg" alt="Workflows Home"></p>
+<p>Within the Swagger, you can see the user123_getDiskUse endpoint and can even try it out.</p>
+<p><strong>Action: Point to your dedicated user123_getDiskUsage (A) endpoint and click the Try it out (B) button. Click the Execute (C) button and point to the Response body (D).</strong></p>
+<p><img src="./img/image043.png" alt="Workflows Home">
+<img src="./img/image044.png" alt="Workflows Home">
+<img src="./img/image045.png" alt="Workflows Home"></p>
 </li>
 <li>
 <p>The other way to leverage the workflow is through the Automation Center, where you can limit usage by applying role-based access controls to your workflows.</p>
 <p><strong>Action: Click the Automation Center (A) link on the top of the page.</strong></p>
-<p><img src="./img/image046.jpg" alt="Workflows Home"></p>
+<p><img src="./img/image046.png" style="width: 30%;" alt="Workflows Home"></p>
 </li>
 <li>
 <p>To start, you need to create a panel for the API in the Automation Center. To create the panel, you need to provide a name, but you can also provide a meaningful description and even a representative icon.</p>
 <p><strong>Action: Click the Create Panel (A) button. Enter the Title (B) Linux Commands User123 and the Description (C) Commands for Linux hosts.<br>
 Download the linux pinguin PNG from <a href="./img/LinuxPenguin.PNG?target=_blank">this page</a>.
 Upload the Icon (D) LinuxPenguin.png and click the Create (E) button. Finally, click the new Linux Commands (F) panel.</strong></p>
-<p><img src="./img/image047.jpg" alt="Workflows Home">
-<img src="./img/image048.jpg" alt="Workflows Home">
-<img src="./img/image049.jpg" alt="Workflows Home"></p>
+<p><img src="./img/image047.png" style="width: 25%;" alt="Workflows Home"><br>
+<img src="./img/image048.png" style="width: 50%;" alt="Workflows Home"><br>
+<img src="./img/image049.png" style="width: 75%;" alt="Workflows Home"></p>
 </li>
 <li>
 <p>Next, you need to create a tile for the panel.</p>
-<p><strong>Action: Click the Create Tile (A) button.<br>Click on the file icon next to the Workflow (required) field and choose Shared -&gt; admin -&gt; User -&gt; HandsOn Lab 1 -&gt; SSH-df-h.</strong></p>
-<p><img src="./img/image050.jpg" alt="Workflows Home"></p>
+<p><strong>Action: Click the Create Tile (A) button.</strong></p>
+<p><img src="./img/image051.png" style="width: 25%;" alt="Workflows Home"></p>
+<p><strong>Action: Click on the file icon next to the Workflow (required) field .</strong></p>
+<p><img src="./img/image050.png" style="width: 50%;" alt="Workflows Home"></p>
 <p><strong>Select the workflow (B) admin/User/HandsOn Lab 1/SSH - df -h and click the Next (C) button. Enter the Title (D) ‘User123 Disk Utilization’ with your username and click the Next (E) button. Click the Create (F) button.</strong></p>
-<p><img src="./img/image051.jpg" alt="Workflows Home">
-<img src="./img/image052.jpg" alt="Workflows Home">
-<img src="./img/image053.jpg" alt="Workflows Home">
-<img src="./img/image054.jpg" alt="Workflows Home"></p>
+<p><img src="./img/image052.png" style="width: 50%;" alt="Workflows Home"><br>
+<img src="./img/image053.png" style="width: 50%;" alt="Workflows Home"><br>
+<img src="./img/image054.png" style="width: 50%;" alt="Workflows Home"></p>
 </li>
 <li>
 <p>Now, you can execute the workflow and get the same result that you have seen several times now.</p>
 <p><strong>Action: Click the User123 Disk Utilization (A) tile. Click the Run (B) button and point at the Result (C). Click the Cancel (D) button.</strong></p>
-<p><img src="./img/image056.jpg" alt="Workflows Home">
-<img src="./img/image057.jpg" alt="Workflows Home">
-<img src="./img/image058.jpg" alt="Workflows Home"></p>
+<p><img src="./img/image055.png" style="width: 30%;" alt="Workflows Home"><br>
+<img src="./img/image056.png" style="width: 50%;" alt="Workflows Home"><br>
+<img src="./img/image057.png" style="width: 50%;" alt="Workflows Home"></p>
 </li>
 </ol>
 <h4 id="16logging-and-roi-dashboard">1.6	Logging and ROI dashboard</h4>
 <ol>
 <li>
 <p>The system logs all the executions that are done within it, and it tells you exactly who ran them, from where they were run, such as the API Gateway or Automation Center, and how long they took to run. It also includes a unique identifier for each log. So, if you want to send off logs to a centralized location, such as a Splunk or centralized monitoring solution, you can do that quickly.</p>
-<p><strong>Action: Click the Logs (A) link at the top of the page. Click the Description (B) of any log. Point to the Executed by (C), the Executed from (D), and the Time started and ended (E) fields for the expanded log. Finally, observe the Log identifier (F) for the expanded log.</strong></p>
-<p><img src="./img/image059.jpg" alt="Workflows Home"></p>
+<p><strong>Action: Click the Logs (A) link on the left of the page. Click the Description (B) of any log. Point to the Executed by (C), the Executed from (D), and the Time started and ended (E) fields for the expanded log. Finally, observe the Log identifier (F) for the expanded log.</strong></p>
+<p><img src="./img/image058.png" alt="Workflows Home"></p>
 </li>
 <li>
 <p>Your final stop on today’s tour is the return on investment or ROI dashboard, where you can see the different executions that are being performed across the platform, how often they're being executed, how much time they're saving, as well as any failed executions.</p>
-<p><strong>Action: Click the Dashboard (A) link and the ROI (B) option on the top of the page. Notice the Executions today (C) and Time saved today (D) tiles, as well as the other tiles on the page.</strong></p>
-<p><img src="./img/image060.jpg" alt="Workflows Home"></p>
+<p><strong>Action: Click the ROI (A) link on the left of the page. Notice the Executions today (B) and Time saved today (C) tiles, as well as the other tiles on the page.</strong></p>
+<p><img src="./img/image059.png" alt="Workflows Home"></p>
 </li>
 <li>
 <p>This concludes your tour of Concert Workflows. Thank you for your time.</p>

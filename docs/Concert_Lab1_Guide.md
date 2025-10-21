@@ -105,7 +105,7 @@ In this Exercise Guide, you will explore IBM Concert Workflows. Concert Workflow
  
     **Action: Hover over the SSH block to reveal the vertical ellipsis (A) and click the Locate (B) option. Then, point to the SSH (C) integration on the left.**
 
-    ![Workflows Home](./img/image011.jpg "Create Workflow")
+    ![Workflows Home](./img/image011.png "Create Workflow")
 
 7.	To include a block in your workflow, drag it over and complete the details. For the SSH integration, authentication to the server is the most important detail. 
  
@@ -193,13 +193,13 @@ In this Exercise Guide, you will explore IBM Concert Workflows. Concert Workflow
 
 2.	Create an API. 
  
-    ** Action: In the Concert Workflows dashboard, click the APIs (A) tab near the top of the screen. Click the Create API (B) button.**
+    **Action: In the Concert Workflows menue, click the APIs (A) link. Click the Create API (B) button.**
 
     ![Workflows Home](./img/image031.png)
 
     **Enter a Name (A) as follow: linux-command-user123 with your dedicated username at the end. Under General Settings, select Worker group as default, under Authentications, select Authentication as Anonymous, and then click the Create button. If you see a screen indicating that there are no workflow deployments created yet, you can ignore it.**
 
-    ![Workflows Home](./img/image032.jpg)
+    ![Workflows Home](./img/image032.png)
 
 3.	Create an API stage. 
  
@@ -209,11 +209,11 @@ In this Exercise Guide, you will explore IBM Concert Workflows. Concert Workflow
 
     **Enter the Name (A)  ‘prod’ and click the Create (B) button.**
 
-    ![Workflows Home](./img/image034.jpg)
+    ![Workflows Home](./img/image034.png)
 
 4.	Now, we will go back to the SSH-df-h Workflow to deploy it.  
  
-    **Action: Go back to Workflows -> Shared -> admin -> User -> HandOn Lab 1 -> SSH-df-h workflow.  Click on the Deploy Workflow button on the top right.**
+    **Action: Go back to Workflows -> User -> HandOn Lab 1 -> SSH-df-h workflow.  Select Deploy Workflow from the Workflow actions on the top right.**
 
     ![Workflows Home](./img/image035.png)
 
@@ -221,32 +221,35 @@ In this Exercise Guide, you will explore IBM Concert Workflows. Concert Workflow
 
     **Action: Click on the API Name (A) field. Choose the API that you created in the previous steps e.g. linux-command-user123 with your dedicated username.**
 
-    ![Workflows Home](./img/image037.jpg)
+    ![Workflows Home](./img/image036.png)
 
 6.	Attach the endpoint to your production. 
  
     **Action: Select the prod (A) stage and click the plus sign (B) next to the Endpoint field.**
 
-    ![Workflows Home](./img/image038.jpg)
+    ![Workflows Home](./img/image038.png)
 
-7.	Give your endpoint a name and select the API method. All the standard API methods are available, like Get, Put, and Delete. Get is appropriate for this endpoint. 
+7.  Give your endpoint a name and select the API method. All the standard API methods are available, like Get, Put, and Delete. Get is appropriate for this endpoint. 
  
-    **Action: In the Path (A) field, enter a dedicated name with your username e.g. 
-user123/getDiskUsage. Drop down the Method (B) menu and select Get. Click Create.**
+    **Action: In the Path (A) field, enter a dedicated name with your username e.g. user123_getDiskUsage. Drop down the Method (B) menu and select Get. Click Create.**
 
-    ![Workflows Home](./img/image039.jpg)
+    ![Workflows Home](./img/image039.png)
 
 8.	The endpoint can now be copied to your clipboard and deployed. 
  
     **Action: Click the Copy (A) button and then click the Deploy (B) button.**
 
-    ![Workflows Home](./img/image040.jpg)
+    ![Workflows Home](./img/image040.png)
 
 9.	Now, you can paste the URL into your browser to run the workflow and see the result. 
  
     **Action: Open a new browser tab, paste the URL (A) into your browser, and notice the result (B). Return to the Concert Workflows browser tab.**
 
-    ![Workflows Home](./img/image041.jpg)
+    ```json
+
+    {"result":["/dev/vda3       495M  173M  322M  35% /boot"]}
+
+    ```
 
 10.	If you go back to the APIs page in Concert Workflows, you can also get the Swagger build-out for the endpoint. 
  
@@ -254,65 +257,69 @@ user123/getDiskUsage. Drop down the Method (B) menu and select Get. Click Create
 
     ![Workflows Home](./img/image042.png)
 
-11.	Within the Swagger, you can see the user123/getDiskUse endpoint and can even try it out. 
+11.	Within the Swagger, you can see the user123_getDiskUse endpoint and can even try it out. 
  
-    **Action: Point to your dedicated user123/getDiskUsage (A) endpoint and click the Try it out (B) button. Click the Execute (C) button and point to the Response body (D).**
+    **Action: Point to your dedicated user123_getDiskUsage (A) endpoint and click the Try it out (B) button. Click the Execute (C) button and point to the Response body (D).**
 
-    ![Workflows Home](./img/image043.jpg)
-    ![Workflows Home](./img/image044.jpg)
-    ![Workflows Home](./img/image045.jpg)
+    ![Workflows Home](./img/image043.png)
+    ![Workflows Home](./img/image044.png)
+    ![Workflows Home](./img/image045.png)
 
 12.	The other way to leverage the workflow is through the Automation Center, where you can limit usage by applying role-based access controls to your workflows. 
  
     **Action: Click the Automation Center (A) link on the top of the page.**
 
-    ![Workflows Home](./img/image046.jpg)
+    ![Workflows Home](./img/image046.png)
 
 13.	To start, you need to create a panel for the API in the Automation Center. To create the panel, you need to provide a name, but you can also provide a meaningful description and even a representative icon. 
  
     **Action: Click the Create Panel (A) button. Enter the Title (B) Linux Commands User123 and the Description (C) Commands for Linux hosts.  
-Download the linux pinguin PNG from [this page](./img/LinuxPenguin.PNG?target=_blank). 
-Upload the Icon (D) LinuxPenguin.png and click the Create (E) button. Finally, click the new Linux Commands (F) panel.**
+    Download the linux pinguin PNG from [this page](./img/LinuxPenguin.PNG?target=_blank). 
+    Upload the Icon (D) LinuxPenguin.png and click the Create (E) button. Finally, click the new Linux Commands (F) panel.**
 
-    ![Workflows Home](./img/image047.jpg)
-    ![Workflows Home](./img/image048.jpg)
-    ![Workflows Home](./img/image049.jpg)
+    ![Workflows Home](./img/image047.png)
+    ![Workflows Home](./img/image048.png)
+    ![Workflows Home](./img/image049.png)
 
-14. Next, you need to create a tile for the panel.
+1.  Next, you need to create a tile for the panel.
 
-    **Action: Click the Create Tile (A) button.<br>Click on the file icon next to the Workflow (required) field and choose Shared -> admin -> User -> HandsOn Lab 1 -> SSH-df-h.**
+    **Action: Click the Create Tile (A) button.**
 
-    ![Workflows Home](./img/image050.jpg)
+    ![Workflows Home](./img/image051.png)
+
+    **Action: Click on the file icon next to the Workflow (required) field .**
+
+    ![Workflows Home](./img/image050.png)
 
     **Select the workflow (B) admin/User/HandsOn Lab 1/SSH - df -h and click the Next (C) button. Enter the Title (D) ‘User123 Disk Utilization’ with your username and click the Next (E) button. Click the Create (F) button.**
 
-    ![Workflows Home](./img/image051.jpg)
-    ![Workflows Home](./img/image052.jpg)
-    ![Workflows Home](./img/image053.jpg)
-    ![Workflows Home](./img/image054.jpg)
+    ![Workflows Home](./img/image052.png)
+    ![Workflows Home](./img/image053.png)
+    ![Workflows Home](./img/image054.png)
 
-15. Now, you can execute the workflow and get the same result that you have seen several times now. 
+2.  Now, you can execute the workflow and get the same result that you have seen several times now. 
  
     **Action: Click the User123 Disk Utilization (A) tile. Click the Run (B) button and point at the Result (C). Click the Cancel (D) button.**
 
-    ![Workflows Home](./img/image056.jpg)
-    ![Workflows Home](./img/image057.jpg)
-    ![Workflows Home](./img/image058.jpg)
+    ![Workflows Home](./img/image055.png)
+    ![Workflows Home](./img/image056.png)
+    ![Workflows Home](./img/image057.png)
 
 #### 1.6	Logging and ROI dashboard 
 1.	The system logs all the executions that are done within it, and it tells you exactly who ran them, from where they were run, such as the API Gateway or Automation Center, and how long they took to run. It also includes a unique identifier for each log. So, if you want to send off logs to a centralized location, such as a Splunk or centralized monitoring solution, you can do that quickly. 
  
-    **Action: Click the Logs (A) link at the top of the page. Click the Description (B) of any log. Point to the Executed by (C), the Executed from (D), and the Time started and ended (E) fields for the expanded log. Finally, observe the Log identifier (F) for the expanded log.**
+    **Action: Click the Logs (A) link on the left of the page. Click the Description (B) of any log. Point to the Executed by (C), the Executed from (D), and the Time started and ended (E) fields for the expanded log. Finally, observe the Log identifier (F) for the expanded log.**
 
-    ![Workflows Home](./img/image059.jpg)
+    ![Workflows Home](./img/image058.png)
 
 2.	Your final stop on today’s tour is the return on investment or ROI dashboard, where you can see the different executions that are being performed across the platform, how often they're being executed, how much time they're saving, as well as any failed executions. 
  
-    **Action: Click the Dashboard (A) link and the ROI (B) option on the top of the page. Notice the Executions today (C) and Time saved today (D) tiles, as well as the other tiles on the page.**
+    **Action: Click the ROI (A) link on the left of the page. Notice the Executions today (B) and Time saved today (C) tiles, as well as the other tiles on the page.**
 
-    ![Workflows Home](./img/image060.jpg)
+    ![Workflows Home](./img/image059.png)
 
-3.	This concludes your tour of Concert Workflows. Thank you for your time. 
+3.	This concludes your tour of Concert Workflows. Thank you for your time.
+
 ### 2. Getting help and troubleshooting 
 If you require assistance, ask your questions to the instructor or ask the colleagues who are assisting the session in your location.  
 
