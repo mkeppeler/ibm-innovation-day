@@ -1,3 +1,8 @@
-theme: jekyll-theme-minimal
+url: https://mkeppeler.github.io
 title: IBM Innovation Day - Labs
-description: Bookmark this to keep an eye on my project updates!
+description: This site offers hands-on labs for IBM Concert Workflows.
+theme: jekyll-theme-architect
+
+kramdown:
+  syntax_highlighter_opts:
+    disable : true
