@@ -1,3 +1,9 @@
 theme: jekyll-theme-minimal
 title: IBM Innovation Day - Labs
-description: Bookmark this to keep an eye on my project updates!
+description: This site offers hands-on labs for IBM Concert Workflows.
+
+layout: page
+title: "IBM Concert Workflows - Labs"
+permalink: /Labs.html
+
+markdown: kramdown
