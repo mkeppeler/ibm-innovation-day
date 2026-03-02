@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -47,6 +47,19 @@
           <li class="nav__item">
             <a class="nav__link" href="#section--3">Lab3</a>
           </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--4">Lab4</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--5">Lab5</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--6">Lab6</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--7">Help</a>
+          </li>
+
           <li class="nav__item">
             <a class="nav__link nav__link--btn btn--show-modal" href="#top"
               >Home</a
@@ -492,514 +505,580 @@
         </ol>
       </div>
     </section>
-
-    <h4 id="13examining-the-ssh-workflow">1.3 Examining the SSH workflow</h4>
-    <ol>
-      <li>
-        <p>
-          Take a closer look at this SSH workflow. It uses the Linux df command
-          to get information about the available space on mounted file systems.
-          It then formats and examines the output to identify directories with
-          high utilization and opens a ServiceNow incident for any directory
-          with excessively high utilization. A breakpoint has been set after the
-          SSH block so you can run the workflow in debug mode and examine the
-          results of the SSH block before continuing.
-        </p>
-        <p>
-          <strong
-            >Action: Click on breakLines object (A) and click the Debug (B)
-            button. If you get a message indicating that running the script will
-            autosave it, click Save to proceed.</strong
-          >
-        </p>
-        <p><img src="./img/image019.jpg" alt="Workflows Home" /></p>
-      </li>
-      <li>
-        <p>
-          The workflow paused after running the SSH command as expected. Now,
-          you can look at the SSH results, including the output from the df
-          command and any errors that occurred.
-        </p>
-        <p>
-          <strong
-            >Action: Click the edit (A) icon next to the sshCommand and point to
-            the results (B). Click the Cancel (C) button to close the
-            window.</strong
-          >
-        </p>
-        <p>
-          <img src="./img/image020.jpg" alt="Workflows Home" />
-          <img src="./img/image021.jpg" alt="Workflows Home" />
-        </p>
-      </li>
-      <li>
-        <p>
-          You can also see a convenient summary of the results without even
-          going into the editor, and if you hover over the result value, the
-          full results pop up.
-        </p>
-        <p>
-          <strong
-            >Action: Expand the sshCommand results by clicking the expand (A)
-            icon and then hover over the result value.</strong
-          >
-        </p>
-        <p><img src="./img/image022.jpg" alt="Workflows Home" /></p>
-      </li>
-      <li>
-        <p>
-          As you can see, the results are unusable in their current form, which
-          is why the next several stages of the workflow reformat the data to
-          break the output into separate lines and loop through the lines to
-          remove the header line, break each remaining line into components, and
-          remove extra spaces.
-        </p>
-        <p>
-          <strong
-            >Action: Scroll through the workflow and have a look at the stages:
-            breakLines (A), afterHeader (B), breakString (C), and removeSpaces
-            (D).</strong
-          >
-        </p>
-        <p>
-          <img src="./img/image023.jpg" alt="Workflows Home" />
-          <img src="./img/image024.jpg" alt="Workflows Home" />
-        </p>
-      </li>
-      <li>
-        <p>
-          With the output formatted, each directory can be checked for its
-          utilization.
-        </p>
-        <p><strong>Action: Point to the parseFloat (A) stage.</strong></p>
-        <p><img src="./img/image025.jpg" alt="Workflows Home" /></p>
-      </li>
-      <li>
-        <p>
-          The next stage of the workflow opens incident in ServiceNow for any
-          directories with high utilization so they can be addressed.
-        </p>
-        <p><strong>Action: Have a look at the ServiceNow (A) stage.</strong></p>
-        <p><img src="./img/image026.jpg" alt="Workflows Home" /></p>
-      </li>
-      <li>
-        <p>
-          Now, we will terminate the debug mode and run the full workflow. The
-          result will show the directories that are over the utilization
-          threshold, so incidents should get opened in ServiceNow.
-        </p>
-        <p>
-          <strong
-            >Action: Click the stop (A) icon to terminate debug mode, and then
-            click the Run (B) button. Finally, point to the result (C).</strong
-          >
-        </p>
-        <p><img src="./img/image027.jpg" alt="Workflows Home" /></p>
-      </li>
-    </ol>
-    <h4 id="14viewing-an-incident-generated-by-a-workflow-in-servicenow">
-      1.4 Viewing an incident generated by a workflow in ServiceNow
-    </h4>
-    <ol>
-      <li>
-        <p>You should now find a new incident in ServiceNow.</p>
-        <p>
-          <strong
-            >Username and password information will be provided by the
-            instructors</strong
-          >
-        </p>
-        <p>
-          <strong
-            >Action: Log into ServiceNow in your browser and navigate to the
-            <a
-              href="https://dev222752.service-now.com/now/nav/ui/classic/params/target/incident_list.do"
-              >Incidents page</a
-            >. Click the Run (A) button to refresh the incident list and point
-            to a newly opened incident (B).</strong
-          >
-        </p>
-        <p><img src="./img/image028.jpg" alt="Workflows Home" /></p>
-      </li>
-      <li>
-        <p>
-          When you open the incident details, you can see that it contains
-          everything that is needed to resolve the issue, including a
-          description of the issue and the directory that is over the
-          utilization threshold.
-        </p>
-        <p>
-          <strong
-            >Action: Click the Incident Number (A) and then point to the Short
-            Description and Description (B) of the incident. Return to the
-            Concert Workflows browser tab.</strong
-          >
-        </p>
-        <p>
-          <img src="./img/image029.jpg" alt="Workflows Home" />
-          <img src="./img/image030.jpg" alt="Workflows Home" />
-        </p>
-      </li>
-    </ol>
-    <h4 id="15deploying-a-workflow">1.5 Deploying a workflow</h4>
-    <ol>
-      <li>
-        <p>
-          You’ll probably want to run such a useful workflow regularly. You can
-          accomplish this within the platform or by deploying a RESTful
-          application programming interface (API) endpoint. To deploy an API
-          endpoint, we will use the Deploy Workflow button. First, we need to
-          create an API and a stage.
-        </p>
-      </li>
-      <li>
-        <p>Create an API.</p>
-        <p>
-          <strong
-            >Action: In the Concert Workflows menue, click the APIs (A) link.
-            Click the Create API (B) button.</strong
-          >
-        </p>
-        <p><img src="./img/image031.png" alt="Workflows Home" /></p>
-        <p>
-          <strong
-            >Enter a Name (A) as follow: linux-command-user123 with your
-            dedicated username at the end. Under General Settings, select Worker
-            group as default, under Authentications, select Authentication as
-            Anonymous, and then click the Create button. If you see a screen
-            indicating that there are no workflow deployments created yet, you
-            can ignore it.</strong
-          >
-        </p>
-        <p>
-          <img
-            src="./img/image032.png"
-            style="width: 50%"
-            alt="Workflows Home"
-          />
-        </p>
-      </li>
-      <li>
-        <p>Create an API stage.</p>
-        <p>
-          <strong
-            >Action: Click the Stages (A) link and then click the Create Stage
-            (B) button.</strong
-          >
-        </p>
-        <p><img src="./img/image033.png" alt="Workflows Home" /></p>
-        <p>
-          <strong
-            >Enter the Name (A) ‘prod’ and click the Create (B) button.</strong
-          >
-        </p>
-        <p>
-          <img
-            src="./img/image034.png"
-            style="width: 50%"
-            alt="Workflows Home"
-          />
-        </p>
-      </li>
-      <li>
-        <p>Now, we will go back to the SSH-df-h Workflow to deploy it.</p>
-        <p>
-          <strong
-            >Action: Go back to Workflows -&gt; User -&gt; HandOn Lab 1 -&gt;
-            SSH-df-h workflow. Select Deploy Workflow from the Workflow actions
-            on the top right.</strong
-          >
-        </p>
-        <p><img src="./img/image035.png" alt="Workflows Home" /></p>
-      </li>
-      <li>
-        <p>Fill out the information to deploy as follows.</p>
-        <p>
-          <strong
-            >Action: Click on the API Name (A) field. Choose the API that you
-            created in the previous steps e.g. linux-command-user123 with your
-            dedicated username.</strong
-          >
-        </p>
-        <p><img src="./img/image036.png" alt="Workflows Home" /></p>
-      </li>
-      <li>
-        <p>Attach the endpoint to your production.</p>
-        <p>
-          <strong
-            >Action: Select the prod (A) stage and click the plus sign (B) next
-            to the Endpoint field.</strong
-          >
-        </p>
-        <p><img src="./img/image038.png" alt="Workflows Home" /></p>
-      </li>
-      <li>
-        <p>
-          Give your endpoint a name and select the API method. All the standard
-          API methods are available, like Get, Put, and Delete. Get is
-          appropriate for this endpoint.
-        </p>
-        <p>
-          <strong
-            >Action: In the Path (A) field, enter a dedicated name with your
-            username e.g. user123_getDiskUsage. Drop down the Method (B) menu
-            and select Get. Click Create.</strong
-          >
-        </p>
-        <p>
-          <img
-            src="./img/image039.png"
-            style="width: 30%"
-            alt="Workflows Home"
-          />
-        </p>
-      </li>
-      <li>
-        <p>The endpoint can now be copied to your clipboard and deployed.</p>
-        <p>
-          <strong
-            >Action: Click the Copy (A) button and then click the Deploy (B)
-            button.</strong
-          >
-        </p>
-        <p><img src="./img/image040.png" alt="Workflows Home" /></p>
-      </li>
-      <li>
-        <p>
-          Now, you can paste the URL into your browser to run the workflow and
-          see the result.
-        </p>
-        <p>
-          <strong
-            >Action: Open a new browser tab, paste the URL (A) into your
-            browser, and notice the result (B). Return to the Concert Workflows
-            browser tab.</strong
-          >
-        </p>
-        <pre><code class="language-json">
+    <section class="section" id="section--3">
+      <div class="section__title">
+        <h4>1.3 Examining the SSH workflow</h4>
+      </div>
+      <div class="section__content">
+        <ol>
+          <li>
+            <p>
+              Take a closer look at this SSH workflow. It uses the Linux df
+              command to get information about the available space on mounted
+              file systems. It then formats and examines the output to identify
+              directories with high utilization and opens a ServiceNow incident
+              for any directory with excessively high utilization. A breakpoint
+              has been set after the SSH block so you can run the workflow in
+              debug mode and examine the results of the SSH block before
+              continuing.
+            </p>
+            <p>
+              <strong
+                >Action: Click on breakLines object (A) and click the Debug (B)
+                button. If you get a message indicating that running the script
+                will autosave it, click Save to proceed.</strong
+              >
+            </p>
+            <p>
+              <img
+                class="fit"
+                src="./img/image019.jpg"
+                alt="Workflows Home"
+                title="Debug Workflow"
+              />
+            </p>
+          </li>
+          <li>
+            <p>
+              The workflow paused after running the SSH command as expected.
+              Now, you can look at the SSH results, including the output from
+              the df command and any errors that occurred.
+            </p>
+            <p>
+              <strong
+                >Action: Click the edit (A) icon next to the sshCommand and
+                point to the results (B). Click the Cancel (C) button to close
+                the window.</strong
+              >
+            </p>
+            <p>
+              <img
+                class="fit"
+                src="./img/image020.jpg"
+                alt="Workflows Home"
+                title="Debugger"
+              />
+              <img
+                class="fit"
+                src="./img/image021.jpg"
+                alt="Workflows Home"
+                title="Debug Result"
+              />
+            </p>
+          </li>
+          <li>
+            <p>
+              You can also see a convenient summary of the results without even
+              going into the editor, and if you hover over the result value, the
+              full results pop up.
+            </p>
+            <p>
+              <strong
+                >Action: Expand the sshCommand results by clicking the expand
+                (A) icon and then hover over the result value.</strong
+              >
+            </p>
+            <p><img src="./img/image022.jpg" alt="Workflows Home" /></p>
+          </li>
+          <li>
+            <p>
+              As you can see, the results are unusable in their current form,
+              which is why the next several stages of the workflow reformat the
+              data to break the output into separate lines and loop through the
+              lines to remove the header line, break each remaining line into
+              components, and remove extra spaces.
+            </p>
+            <p>
+              <strong
+                >Action: Scroll through the workflow and have a look at the
+                stages: breakLines (A), afterHeader (B), breakString (C), and
+                removeSpaces (D).</strong
+              >
+            </p>
+            <p>
+              <img src="./img/image023.jpg" alt="Workflows Home" />
+              <img src="./img/image024.jpg" alt="Workflows Home" />
+            </p>
+          </li>
+          <li>
+            <p>
+              With the output formatted, each directory can be checked for its
+              utilization.
+            </p>
+            <p><strong>Action: Point to the parseFloat (A) stage.</strong></p>
+            <p><img src="./img/image025.jpg" alt="Workflows Home" /></p>
+          </li>
+          <li>
+            <p>
+              The next stage of the workflow opens incident in ServiceNow for
+              any directories with high utilization so they can be addressed.
+            </p>
+            <p>
+              <strong>Action: Have a look at the ServiceNow (A) stage.</strong>
+            </p>
+            <p><img src="./img/image026.jpg" alt="Workflows Home" /></p>
+          </li>
+          <li>
+            <p>
+              Now, we will terminate the debug mode and run the full workflow.
+              The result will show the directories that are over the utilization
+              threshold, so incidents should get opened in ServiceNow.
+            </p>
+            <p>
+              <strong
+                >Action: Click the stop (A) icon to terminate debug mode, and
+                then click the Run (B) button. Finally, point to the result
+                (C).</strong
+              >
+            </p>
+            <p>
+              <img class="fit" src="./img/image027.jpg" alt="Workflows Home" />
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="section" id="section--4">
+      <div class="section__title">
+        <h4>1.4 EViewing an incident generated by a workflow in ServiceNow</h4>
+      </div>
+      <div class="section__content">
+        <ol>
+          <li>
+            <p>You should now find a new incident in ServiceNow.</p>
+            <p>
+              <strong
+                >Username and password information will be provided by the
+                instructors</strong
+              >
+            </p>
+            <p>
+              <strong
+                >Action: Log into ServiceNow in your browser and navigate to the
+                <a
+                  href="https://dev222752.service-now.com/now/nav/ui/classic/params/target/incident_list.do"
+                  >Incidents page</a
+                >. Click the Run (A) button to refresh the incident list and
+                point to a newly opened incident (B).</strong
+              >
+            </p>
+            <p>
+              <img class="fit" src="./img/image028.jpg" alt="Workflows Home" />
+            </p>
+          </li>
+          <li>
+            <p>
+              When you open the incident details, you can see that it contains
+              everything that is needed to resolve the issue, including a
+              description of the issue and the directory that is over the
+              utilization threshold.
+            </p>
+            <p>
+              <strong
+                >Action: Click the Incident Number (A) and then point to the
+                Short Description and Description (B) of the incident. Return to
+                the Concert Workflows browser tab.</strong
+              >
+            </p>
+            <p>
+              <img class="fit" src="./img/image029.jpg" alt="Workflows Home" />
+              <img class="fit" src="./img/image030.jpg" alt="Workflows Home" />
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="section" id="section--5">
+      <div class="section__title">
+        <h4>1.5 Deploying a workflow</h4>
+      </div>
+      <div class="section__content">
+        <ol>
+          <li>
+            <p>
+              You’ll probably want to run such a useful workflow regularly. You
+              can accomplish this within the platform or by deploying a RESTful
+              application programming interface (API) endpoint. To deploy an API
+              endpoint, we will use the Deploy Workflow button. First, we need
+              to create an API and a stage.
+            </p>
+          </li>
+          <li>
+            <p>Create an API.</p>
+            <p>
+              <strong
+                >Action: In the Concert Workflows menue, click the APIs (A)
+                link. Click the Create API (B) button.</strong
+              >
+            </p>
+            <p>
+              <img class="fit" src="./img/image031.png" alt="Workflows Home" />
+            </p>
+            <p>
+              <strong
+                >Enter a Name (A) as follow: linux-command-user123 with your
+                dedicated username at the end. Under General Settings, select
+                Worker group as default, under Authentications, select
+                Authentication as Anonymous, and then click the Create button.
+                If you see a screen indicating that there are no workflow
+                deployments created yet, you can ignore it.</strong
+              >
+            </p>
+            <p>
+              <img
+                src="./img/image032.png"
+                style="width: 50%"
+                alt="Workflows Home"
+              />
+            </p>
+          </li>
+          <li>
+            <p>Create an API stage.</p>
+            <p>
+              <strong
+                >Action: Click the Stages (A) link and then click the Create
+                Stage (B) button.</strong
+              >
+            </p>
+            <p>
+              <img class="fit" src="./img/image033.png" alt="Workflows Home" />
+            </p>
+            <p>
+              <strong
+                >Enter the Name (A) ‘prod’ and click the Create (B)
+                button.</strong
+              >
+            </p>
+            <p>
+              <img
+                src="./img/image034.png"
+                style="width: 50%"
+                alt="Workflows Home"
+              />
+            </p>
+          </li>
+          <li>
+            <p>Now, we will go back to the SSH-df-h Workflow to deploy it.</p>
+            <p>
+              <strong
+                >Action: Go back to Workflows -&gt; User -&gt; HandOn Lab 1
+                -&gt; SSH-df-h workflow. Select Deploy Workflow from the
+                Workflow actions on the top right.</strong
+              >
+            </p>
+            <p><img src="./img/image035.png" alt="Workflows Home" /></p>
+          </li>
+          <li>
+            <p>Fill out the information to deploy as follows.</p>
+            <p>
+              <strong
+                >Action: Click on the API Name (A) field. Choose the API that
+                you created in the previous steps e.g. linux-command-user123
+                with your dedicated username.</strong
+              >
+            </p>
+            <p>
+              <img class="fit" src="./img/image036.png" alt="Workflows Home" />
+            </p>
+          </li>
+          <li>
+            <p>Attach the endpoint to your production.</p>
+            <p>
+              <strong
+                >Action: Select the prod (A) stage and click the plus sign (B)
+                next to the Endpoint field.</strong
+              >
+            </p>
+            <p>
+              <img class="fit" src="./img/image038.png" alt="Workflows Home" />
+            </p>
+          </li>
+          <li>
+            <p>
+              Give your endpoint a name and select the API method. All the
+              standard API methods are available, like Get, Put, and Delete. Get
+              is appropriate for this endpoint.
+            </p>
+            <p>
+              <strong
+                >Action: In the Path (A) field, enter a dedicated name with your
+                username e.g. user123_getDiskUsage. Drop down the Method (B)
+                menu and select Get. Click Create.</strong
+              >
+            </p>
+            <p>
+              <img
+                src="./img/image039.png"
+                style="width: 40%"
+                alt="Workflows Home"
+              />
+            </p>
+          </li>
+          <li>
+            <p>
+              The endpoint can now be copied to your clipboard and deployed.
+            </p>
+            <p>
+              <strong
+                >Action: Click the Copy (A) button and then click the Deploy (B)
+                button.</strong
+              >
+            </p>
+            <p>
+              <img class="fit" src="./img/image040.png" alt="Workflows Home" />
+            </p>
+          </li>
+          <li>
+            <p>
+              Now, you can paste the URL into your browser to run the workflow
+              and see the result.
+            </p>
+            <p>
+              <strong
+                >Action: Open a new browser tab, paste the URL (A) into your
+                browser, and notice the result (B). Return to the Concert
+                Workflows browser tab.</strong
+              >
+            </p>
+            <pre><code class="language-json">
 <span class="hljs-punctuation">{</span><span class="hljs-attr">&quot;result&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-punctuation">[</span><span class="hljs-string">&quot;/dev/vda3       495M  173M  322M  35% /boot&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">}</span>
 
 </code></pre>
-      </li>
-      <li>
+          </li>
+          <li>
+            <p>
+              If you go back to the APIs page in Concert Workflows, you can also
+              get the Swagger build-out for the endpoint.
+            </p>
+            <p>
+              <strong
+                >Action: Click the APIs (A) link on the top of the page, click
+                your dedicated API linux-commanduser123 (B) API, and then click
+                the Swagger (C) button.</strong
+              >
+            </p>
+            <p>
+              <img class="fit" src="./img/image042.png" alt="Workflows Home" />
+            </p>
+          </li>
+          <li>
+            <p>
+              Within the Swagger, you can see the user123_getDiskUse endpoint
+              and can even try it out.
+            </p>
+            <p>
+              <strong
+                >Action: Point to your dedicated user123_getDiskUsage (A)
+                endpoint and click the Try it out (B) button. Click the Execute
+                (C) button and point to the Response body (D).</strong
+              >
+            </p>
+            <p>
+              <img class="fit" src="./img/image043.png" alt="Workflows Home" />
+              <img class="fit" src="./img/image044.png" alt="Workflows Home" />
+              <img class="fit" src="./img/image045.png" alt="Workflows Home" />
+            </p>
+          </li>
+          <li>
+            <p>
+              The other way to leverage the workflow is through the Automation
+              Center, where you can limit usage by applying role-based access
+              controls to your workflows.
+            </p>
+            <p>
+              <strong
+                >Action: Click the Automation Center (A) link on the top of the
+                page.</strong
+              >
+            </p>
+            <p>
+              <img
+                src="./img/image046.png"
+                style="width: 30%"
+                alt="Workflows Home"
+              />
+            </p>
+          </li>
+          <li>
+            <p>
+              To start, you need to create a panel for the API in the Automation
+              Center. To create the panel, you need to provide a name, but you
+              can also provide a meaningful description and even a
+              representative icon.
+            </p>
+            <p>
+              <strong
+                >Action: Click the Create Panel (A) button. Enter the Title (B)
+                Linux Commands User123 and the Description (C) Commands for
+                Linux hosts.<br />
+                Download the linux pinguin PNG from
+                <a href="./img/LinuxPenguin.PNG?target=_blank">this page</a>.
+                Upload the Icon (D) LinuxPenguin.png and click the Create (E)
+                button. Finally, click the new Linux Commands (F) panel.</strong
+              >
+            </p>
+            <p>
+              <img
+                src="./img/image047.png"
+                style="width: 30%"
+                alt="Workflows Home"
+              /><br />
+              <img
+                src="./img/image048.png"
+                style="width: 50%"
+                alt="Workflows Home"
+              /><br />
+              <img src="./img/image049.png" class="fit" alt="Workflows Home" />
+            </p>
+          </li>
+          <li>
+            <p>Next, you need to create a tile for the panel.</p>
+            <p><strong>Action: Click the Create Tile (A) button.</strong></p>
+            <p>
+              <img
+                src="./img/image051.png"
+                style="width: 30%"
+                alt="Workflows Home"
+              />
+            </p>
+            <p>
+              <strong
+                >Action: Click on the file icon next to the Workflow (required)
+                field .</strong
+              >
+            </p>
+            <p>
+              <img
+                src="./img/image050.png"
+                style="width: 60%"
+                alt="Workflows Home"
+              />
+            </p>
+            <p>
+              <strong
+                >Select the workflow (B) admin/User/HandsOn Lab 1/SSH - df -h
+                and click the Next (C) button. Enter the Title (D) ‘User123 Disk
+                Utilization’ with your username and click the Next (E) button.
+                Click the Create (F) button.</strong
+              >
+            </p>
+            <p>
+              <img
+                src="./img/image052.png"
+                style="width: 50%"
+                alt="Workflows Home"
+              /><br />
+              <img
+                src="./img/image053.png"
+                style="width: 50%"
+                alt="Workflows Home"
+              /><br />
+              <img
+                src="./img/image054.png"
+                style="width: 50%"
+                alt="Workflows Home"
+              />
+            </p>
+          </li>
+          <li>
+            <p>
+              Now, you can execute the workflow and get the same result that you
+              have seen several times now.
+            </p>
+            <p>
+              <strong
+                >Action: Click the User123 Disk Utilization (A) tile. Click the
+                Run (B) button and point at the Result (C). Click the Cancel (D)
+                button.</strong
+              >
+            </p>
+            <p>
+              <img
+                src="./img/image055.png"
+                style="width: 30%"
+                alt="Workflows Home"
+              /><br />
+              <img
+                src="./img/image056.png"
+                style="width: 50%"
+                alt="Workflows Home"
+              /><br />
+              <img
+                src="./img/image057.png"
+                style="width: 50%"
+                alt="Workflows Home"
+              />
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="section" id="section--6">
+      <div class="section__title">
+        <h4>1.6 Logging and ROI dashboard</h4>
+      </div>
+      <div class="section__content">
+        <ol>
+          <li>
+            <p>
+              The system logs all the executions that are done within it, and it
+              tells you exactly who ran them, from where they were run, such as
+              the API Gateway or Automation Center, and how long they took to
+              run. It also includes a unique identifier for each log. So, if you
+              want to send off logs to a centralized location, such as a Splunk
+              or centralized monitoring solution, you can do that quickly.
+            </p>
+            <p>
+              <strong
+                >Action: Click the Logs (A) link on the left of the page. Click
+                the Description (B) of any log. Point to the Executed by (C),
+                the Executed from (D), and the Time started and ended (E) fields
+                for the expanded log. Finally, observe the Log identifier (F)
+                for the expanded log.</strong
+              >
+            </p>
+            <p>
+              <img class="fit" src="./img/image058.png" alt="Workflows Home" />
+            </p>
+          </li>
+          <li>
+            <p>
+              Your final stop on today’s tour is the return on investment or ROI
+              dashboard, where you can see the different executions that are
+              being performed across the platform, how often they're being
+              executed, how much time they're saving, as well as any failed
+              executions.
+            </p>
+            <p>
+              <strong
+                >Action: Click the ROI (A) link on the left of the page. Notice
+                the Executions today (B) and Time saved today (C) tiles, as well
+                as the other tiles on the page.</strong
+              >
+            </p>
+            <p>
+              <img class="fit" src="./img/image059.png" alt="Workflows Home" />
+            </p>
+          </li>
+          <li>
+            <p>
+              This concludes your tour of Concert Workflows. Thank you for your
+              time.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="section" id="section--7">
+      <div class="section__title">
+        <h4>2. Getting help and troubleshooting</h4>
+      </div>
+      <div class="section__content">
         <p>
-          If you go back to the APIs page in Concert Workflows, you can also get
-          the Swagger build-out for the endpoint.
+          If you require assistance, ask your questions to the instructor or ask
+          the colleagues who are assisting the session in your location.
         </p>
-        <p>
-          <strong
-            >Action: Click the APIs (A) link on the top of the page, click your
-            dedicated API linux-commanduser123 (B) API, and then click the
-            Swagger (C) button.</strong
-          >
-        </p>
-        <p><img src="./img/image042.png" alt="Workflows Home" /></p>
-      </li>
-      <li>
-        <p>
-          Within the Swagger, you can see the user123_getDiskUse endpoint and
-          can even try it out.
-        </p>
-        <p>
-          <strong
-            >Action: Point to your dedicated user123_getDiskUsage (A) endpoint
-            and click the Try it out (B) button. Click the Execute (C) button
-            and point to the Response body (D).</strong
-          >
-        </p>
-        <p>
-          <img src="./img/image043.png" alt="Workflows Home" />
-          <img src="./img/image044.png" alt="Workflows Home" />
-          <img src="./img/image045.png" alt="Workflows Home" />
-        </p>
-      </li>
-      <li>
-        <p>
-          The other way to leverage the workflow is through the Automation
-          Center, where you can limit usage by applying role-based access
-          controls to your workflows.
-        </p>
-        <p>
-          <strong
-            >Action: Click the Automation Center (A) link on the top of the
-            page.</strong
-          >
-        </p>
-        <p>
-          <img
-            src="./img/image046.png"
-            style="width: 30%"
-            alt="Workflows Home"
-          />
-        </p>
-      </li>
-      <li>
-        <p>
-          To start, you need to create a panel for the API in the Automation
-          Center. To create the panel, you need to provide a name, but you can
-          also provide a meaningful description and even a representative icon.
-        </p>
-        <p>
-          <strong
-            >Action: Click the Create Panel (A) button. Enter the Title (B)
-            Linux Commands User123 and the Description (C) Commands for Linux
-            hosts.<br />
-            Download the linux pinguin PNG from
-            <a href="./img/LinuxPenguin.PNG?target=_blank">this page</a>. Upload
-            the Icon (D) LinuxPenguin.png and click the Create (E) button.
-            Finally, click the new Linux Commands (F) panel.</strong
-          >
-        </p>
-        <p>
-          <img
-            src="./img/image047.png"
-            style="width: 25%"
-            alt="Workflows Home"
-          /><br />
-          <img
-            src="./img/image048.png"
-            style="width: 50%"
-            alt="Workflows Home"
-          /><br />
-          <img
-            src="./img/image049.png"
-            style="width: 75%"
-            alt="Workflows Home"
-          />
-        </p>
-      </li>
-      <li>
-        <p>Next, you need to create a tile for the panel.</p>
-        <p><strong>Action: Click the Create Tile (A) button.</strong></p>
-        <p>
-          <img
-            src="./img/image051.png"
-            style="width: 25%"
-            alt="Workflows Home"
-          />
-        </p>
-        <p>
-          <strong
-            >Action: Click on the file icon next to the Workflow (required)
-            field .</strong
-          >
-        </p>
-        <p>
-          <img
-            src="./img/image050.png"
-            style="width: 50%"
-            alt="Workflows Home"
-          />
-        </p>
-        <p>
-          <strong
-            >Select the workflow (B) admin/User/HandsOn Lab 1/SSH - df -h and
-            click the Next (C) button. Enter the Title (D) ‘User123 Disk
-            Utilization’ with your username and click the Next (E) button. Click
-            the Create (F) button.</strong
-          >
-        </p>
-        <p>
-          <img
-            src="./img/image052.png"
-            style="width: 50%"
-            alt="Workflows Home"
-          /><br />
-          <img
-            src="./img/image053.png"
-            style="width: 50%"
-            alt="Workflows Home"
-          /><br />
-          <img
-            src="./img/image054.png"
-            style="width: 50%"
-            alt="Workflows Home"
-          />
-        </p>
-      </li>
-      <li>
-        <p>
-          Now, you can execute the workflow and get the same result that you
-          have seen several times now.
-        </p>
-        <p>
-          <strong
-            >Action: Click the User123 Disk Utilization (A) tile. Click the Run
-            (B) button and point at the Result (C). Click the Cancel (D)
-            button.</strong
-          >
-        </p>
-        <p>
-          <img
-            src="./img/image055.png"
-            style="width: 30%"
-            alt="Workflows Home"
-          /><br />
-          <img
-            src="./img/image056.png"
-            style="width: 50%"
-            alt="Workflows Home"
-          /><br />
-          <img
-            src="./img/image057.png"
-            style="width: 50%"
-            alt="Workflows Home"
-          />
-        </p>
-      </li>
-    </ol>
-    <h4 id="16logging-and-roi-dashboard">1.6 Logging and ROI dashboard</h4>
-    <ol>
-      <li>
-        <p>
-          The system logs all the executions that are done within it, and it
-          tells you exactly who ran them, from where they were run, such as the
-          API Gateway or Automation Center, and how long they took to run. It
-          also includes a unique identifier for each log. So, if you want to
-          send off logs to a centralized location, such as a Splunk or
-          centralized monitoring solution, you can do that quickly.
-        </p>
-        <p>
-          <strong
-            >Action: Click the Logs (A) link on the left of the page. Click the
-            Description (B) of any log. Point to the Executed by (C), the
-            Executed from (D), and the Time started and ended (E) fields for the
-            expanded log. Finally, observe the Log identifier (F) for the
-            expanded log.</strong
-          >
-        </p>
-        <p><img src="./img/image058.png" alt="Workflows Home" /></p>
-      </li>
-      <li>
-        <p>
-          Your final stop on today’s tour is the return on investment or ROI
-          dashboard, where you can see the different executions that are being
-          performed across the platform, how often they're being executed, how
-          much time they're saving, as well as any failed executions.
-        </p>
-        <p>
-          <strong
-            >Action: Click the ROI (A) link on the left of the page. Notice the
-            Executions today (B) and Time saved today (C) tiles, as well as the
-            other tiles on the page.</strong
-          >
-        </p>
-        <p><img src="./img/image059.png" alt="Workflows Home" /></p>
-      </li>
-      <li>
-        <p>
-          This concludes your tour of Concert Workflows. Thank you for your
-          time.
-        </p>
-      </li>
-    </ol>
-    <h3 id="2-getting-help-and-troubleshooting">
-      2. Getting help and troubleshooting
-    </h3>
-    <p>
-      If you require assistance, ask your questions to the instructor or ask the
-      colleagues who are assisting the session in your location.
-    </p>
-    <p><a href="./Labs.html">Back</a></p>
+      </div>
+    </section>
   </body>
 </html>
